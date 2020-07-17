@@ -13,7 +13,7 @@ print("Defence: " + str(monster['Defence']))
 print("Health: " + str(monster['Health']))
 print("Points: " + str (monster['Points']))
 
-results = database.ViewQueryHelper("SELECT * FROM Abilities WHERE MonsterName = ?",(monstername,))
+results = database.ViewQueryHelper("SELECT * FROM AbilitiesTable WHERE MonsterName = ?",(monstername,))
 for row in results:
     print(row['AttackName'])
 
