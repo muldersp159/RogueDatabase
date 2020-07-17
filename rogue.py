@@ -1,7 +1,9 @@
 from interfaces.databaseinterface import DatabaseHelper
 
-database = DatabaseHelper('monster.db')
+database = DatabaseHelper('monsters.db')
 
-#database.ViewQueryHelper("SELECT * FROM users WHERE email=? AND password=?",(email,password))
+results = database.ViewQueryHelper("SELECT * FROM MonsterTable")
+for row in results:
+    print(row['MonsterName'])
 
 #database.ModifyQueryHelper("DELETE FROM users WHERE userid = ?",(userid,)) 
